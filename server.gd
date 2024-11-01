@@ -11,11 +11,14 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 func createServer():
 	# Create server.
 	var peer = ENetMultiplayerPeer.new()
-	peer.create_server(12345, 10)
+	var error = peer.create_server(12345, 10)
+	if error:
+		print(error)
+	
 	multiplayer.multiplayer_peer = peer

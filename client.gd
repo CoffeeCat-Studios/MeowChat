@@ -7,7 +7,7 @@ func _ready() -> void:
 	# By default, these expressions are interchangeable.
 	multiplayer # Get the MultiplayerAPI object configured for this node.
 	get_tree().get_multiplayer() # Get the default MultiplayerAPI object.
-	createClient()
+	#createClient()
 	pass # Replace with function body.
 
 
@@ -16,7 +16,11 @@ func _process(delta: float) -> void:
 	pass
 
 func createClient():
+	print("creating client")
 	# Create client.
 	var peer = ENetMultiplayerPeer.new()
 	peer.create_client("192.168.4.1", 12345)
 	multiplayer.multiplayer_peer = peer
+	
+func buttonPressTest():
+	print("test yes")
