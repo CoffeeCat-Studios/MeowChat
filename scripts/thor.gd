@@ -7,17 +7,21 @@ func _ready() -> void:
 	button.text = "Join Room"
 	button.pressed.connect(self._button_pressed)
 	add_child(button)
+	
+	
+# reference: https://docs.godotengine.org/en/stable/classes/class_object.html
+func _button_pressed():
 	# By default, these expressions are interchangeable.
 	multiplayer # Get the MultiplayerAPI object configured for this node.
 	get_tree().get_multiplayer() # Get the default MultiplayerAPI object.
 	# Create server.
 	var peer = ENetMultiplayerPeer.new()
-	peer.create_client("10.234.140.63", 12345)
+	var error = peer.create_client("10.234.140.126", 12345)
+	if error:
+		print(error)
+	
 	multiplayer.multiplayer_peer = peer
 	print("Peer client created!")
-	
-# reference: https://docs.godotengine.org/en/stable/classes/class_object.html
-func _button_pressed():
 	print("thor pressed")
 
 
