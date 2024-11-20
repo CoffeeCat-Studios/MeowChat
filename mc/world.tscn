@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://gq3bbkegpmh2"]
+
+[ext_resource type="Texture2D" uid="uid://d1s0njddllubl" path="res://icon.svg" id="2_pf73j"]
+[ext_resource type="PackedScene" uid="uid://b66ydry8roi3e" path="res://scenes/view.tscn" id="3_fi6mc"]
+
+[node name="world" type="Node2D"]
+
+[node name="view" parent="." instance=ExtResource("3_fi6mc")]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 6.0
+offset_bottom = 6.0
+
+[node name="GDExample" type="GDExample" parent="."]
+position = Vector2(19.8602, 14.9538)
+texture = ExtResource("2_pf73j")
+centered = false
