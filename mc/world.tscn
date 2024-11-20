@@ -12,6 +12,10 @@ offset_right = 6.0
 offset_bottom = 6.0
 
 [node name="GDExample" type="GDExample" parent="."]
-position = Vector2(19.8602, 14.9538)
+position = Vector2(14.1059, 1.07561)
 texture = ExtResource("2_pf73j")
 centered = false
+
+[node name="Server" type="Server" parent="."]
+z_index = 1
+position = Vector2(12.356, 19.8413)
