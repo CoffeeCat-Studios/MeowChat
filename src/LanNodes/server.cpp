@@ -1,5 +1,6 @@
 #include "server.h"
 #include <godot_cpp/core/class_db.hpp>
+#include <godot_cpp/classes/engine.hpp>
 
 using namespace godot;
 
@@ -25,9 +26,13 @@ Server::~Server()
 void Server::_process(double delta) 
 {
 	// increment w/ delta to change each frame
-	time_passed += delta;
+	if (!Engine::get_singleton()->is_editor_hint())
+	{
+		time_passed += delta;
 
-	movePos();
+		movePos();
+	}
+
 }
 
 
