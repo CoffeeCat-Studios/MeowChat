@@ -4,6 +4,8 @@
 #include <godot_cpp/classes/node.hpp>
 #include <godot_cpp/core/class_db.hpp>
 
+// following this: https://docs.godotengine.org/en/stable/classes/class_enetmultiplayerpeer.html#class-enetmultiplayerpeer
+
 using namespace godot;
 
 // we bind variables here to the settings (i think)
