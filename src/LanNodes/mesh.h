@@ -24,7 +24,6 @@ namespace godot
 		~Mesh();
 
 		void _process(double delta) override;
-        static void _bind_methods();
 	};
 
 }
