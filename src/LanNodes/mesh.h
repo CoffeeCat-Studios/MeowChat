@@ -1,20 +1,16 @@
 #ifndef MESH_H
 #define MESH_H
 
-#include <godot_cpp/classes/node.hpp>
-#include <godot_cpp/classes/e_net_multiplayer_peer.hpp>
-#include <godot_cpp/classes/multiplayer_api.hpp>
-#include <godot_cpp/classes/packet_peer_udp.hpp>
+#include <godot_cpp/classes/node2d.hpp>
 
 namespace godot 
 {
 
-	class Mesh : public Node 
+	class Mesh : public Node2D 
 	{
-		GDCLASS(Mesh, Node)
+		GDCLASS(Mesh, Node2D)
 
 	private:
-		uint32_t uuid;
 
 	protected:
 		static void _bind_methods();
@@ -24,7 +20,8 @@ namespace godot
 		~Mesh();
 
 		void _process(double delta) override;
-        static void _bind_methods();
+        // static void _bind_methods();
+		void create_mesh();
 	};
 
 }
