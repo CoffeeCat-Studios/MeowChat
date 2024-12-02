@@ -1,14 +1,14 @@
-#ifndef MESH_H
-#define MESH_H
+#ifndef MESHNODE_H
+#define MESHNODE_H
 
 #include <godot_cpp/classes/node2d.hpp>
 
 namespace godot 
 {
 
-	class Mesh : public Node2D 
+	class MeshNode : public Node2D 
 	{
-		GDCLASS(Mesh, Node2D)
+		GDCLASS(MeshNode, Node2D)
 
 	private:
 
@@ -16,8 +16,8 @@ namespace godot
 		static void _bind_methods();
 
 	public:
-		Mesh();
-		~Mesh();
+		MeshNode();
+		~MeshNode();
 
 		void _process(double delta) override;
         // static void _bind_methods();

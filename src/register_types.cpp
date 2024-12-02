@@ -3,7 +3,7 @@
 // include the node path
 #include "gdexample.h"
 #include "LanNodes/server.h"
-#include "LanNodes/mesh.h"
+#include "LanNodes/meshNode.h"
 
 // normal godot includes
 #include <gdextension_interface.h>
@@ -20,7 +20,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	// add custom nodes here
 	GDREGISTER_CLASS(GDExample);
 	GDREGISTER_CLASS(Server);
-	GDREGISTER_CLASS(Mesh);
+	GDREGISTER_CLASS(MeshNode);
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {
