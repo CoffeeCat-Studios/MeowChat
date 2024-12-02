@@ -35,6 +35,14 @@ elif env["platform"] == "ios":
             "mc/bin/libgdexample.{}.{}.a".format(env["platform"], env["target"]),
             source=sources,
         )
+elif env["platform"] == "linux":
+    # Linux-specific shared library output
+    library = env.SharedLibrary(
+        "bin/libgdexample.{}.{}.framework/libgdexample.{}.{}".format(
+            env["platform"], env["target"], env["platform"], env["target"]
+        ),  # Output as libgdexample.so
+        source=sources,
+    )
 else:
     library = env.SharedLibrary(
         "mc/bin/libgdexample{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
