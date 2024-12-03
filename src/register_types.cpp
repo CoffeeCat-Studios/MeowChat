@@ -1,10 +1,13 @@
 #include "register_types.h"
 
+// include the node path
 #include "gdexample.h"
 #include "pro.h"
 #include "LanNodes/server.h"
+#include "LanNodes/meshNode.h"
 #include "Buttons/simple.h"
 
+// normal godot includes
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
@@ -16,8 +19,10 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 		return;
 	}
 
+	// add custom nodes here
 	GDREGISTER_CLASS(GDExample);
 	GDREGISTER_CLASS(Server);
+	GDREGISTER_CLASS(MeshNode);
 	GDREGISTER_CLASS(Simple);
 	GDREGISTER_CLASS(Pro);
 }
