@@ -1,11 +1,11 @@
-#ifndef SIMPLE_H
-#define SIMPLE_H
+#ifndef SIMPLEBUTTON_H
+#define SIMPLEBUTTON_H
 
 #include <godot_cpp/classes/button.hpp>
 
 namespace godot {
-    class Simple : public Button {
-        GDCLASS(Simple, Button)
+    class SimpleButton : public Button {
+        GDCLASS(SimpleButton, Button)
 
     private:
 
@@ -14,11 +14,11 @@ namespace godot {
         static void _bind_methods();
 
     public:
-        Simple();
-        ~Simple();
+        SimpleButton();
+        ~SimpleButton();
 
         void _process(double delta) override;
-        void _ready();
+        void _ready() override;
         void _button_pressed();
     };
 }

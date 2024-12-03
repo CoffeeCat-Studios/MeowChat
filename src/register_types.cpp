@@ -2,10 +2,10 @@
 
 // include the node path
 #include "gdexample.h"
-#include "pro.h"
+#include "proNode.h"
 #include "LanNodes/server.h"
 #include "LanNodes/meshNode.h"
-#include "Buttons/simple.h"
+#include "Buttons/simpleButton.h"
 
 // normal godot includes
 #include <gdextension_interface.h>
@@ -23,8 +23,8 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	GDREGISTER_CLASS(GDExample);
 	GDREGISTER_CLASS(Server);
 	GDREGISTER_CLASS(MeshNode);
-	GDREGISTER_CLASS(Simple);
-	GDREGISTER_CLASS(Pro);
+	// GDREGISTER_CLASS(SimpleButton);
+	GDREGISTER_CLASS(ProNode);
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {

@@ -1,22 +1,22 @@
-#include "pro.h"
+#include "proNode.h"
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/classes/engine.hpp>
 
 using namespace godot;
 
-void Pro::_bind_methods() {
+void ProNode::_bind_methods() {
 }
 
-Pro::Pro() {
+ProNode::ProNode() {
 	// Initialize any variables here.
 	time_passed = 0.0;
 }
 
-Pro::~Pro() {
+ProNode::~ProNode() {
 	// Add your cleanup here.
 }
 
-void Pro::_process(double delta) {
+void ProNode::_process(double delta) {
 
 	if (!Engine::get_singleton()->is_editor_hint())
 	{
